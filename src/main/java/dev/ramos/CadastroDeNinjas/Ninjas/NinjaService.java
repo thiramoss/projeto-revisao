@@ -1,2 +1,4 @@
-package dev.ramos.CadastroDeNinjas.Ninjas;public class NinjaService {
+package dev.ramos.CadastroDeNinjas.Ninjas;
+
+public class NinjaService {
 }
