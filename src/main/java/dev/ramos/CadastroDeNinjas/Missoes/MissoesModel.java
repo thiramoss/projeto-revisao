@@ -1,10 +1,12 @@
-package dev.ramos.CadastroDeNinjas.MIssoes;
+package dev.ramos.CadastroDeNinjas.Missoes;
 
 import dev.ramos.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_missoes")
@@ -21,5 +23,5 @@ public class MissoesModel {
     private String dificuldade;
 
     @OneToMany(mappedBy = "missoes")
-    private NinjaModel ninja;
+    private List<NinjaModel> ninja;
 }

@@ -1,9 +1,11 @@
 package dev.ramos.CadastroDeNinjas.Ninjas;
-import dev.ramos.CadastroDeNinjas.MIssoes.MissoesModel;
+import dev.ramos.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
