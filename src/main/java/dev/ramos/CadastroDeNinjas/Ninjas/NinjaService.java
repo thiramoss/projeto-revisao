@@ -2,6 +2,9 @@ package dev.ramos.CadastroDeNinjas.Ninjas;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
@@ -34,5 +37,15 @@ public class NinjaService {
     // Deletar o ninja - Tem que ser método void
     public void deletarNinja(Long id) {
         ninjaRepository.deleteById(id);
+    }
+
+    //Atualizar ninja
+    public NinjaModel atualizarNinja(Long id, NinjaModel ninjaAtualizado){
+        if(ninjaRepository.existsById(id)){
+            ninjaAtualizado.setId(id);
+            return ninjaRepository.save(ninjaAtualizado);
+        }
+
+        return null;
     }
 }
